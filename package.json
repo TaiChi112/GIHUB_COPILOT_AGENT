@@ -1,0 +1,37 @@
+{
+  "name": "ecommerce-mvp",
+  "version": "1.0.0",
+  "description": "E-commerce platform for small business owners - MVP",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "bun run dev:backend & bun run dev:frontend",
+    "dev:backend": "bun --cwd packages/backend dev",
+    "dev:frontend": "bun --cwd packages/frontend dev",
+    "build": "bun run build:backend && bun run build:frontend",
+    "build:backend": "bun --cwd packages/backend build",
+    "build:frontend": "bun --cwd packages/frontend build",
+    "db:generate": "bun --cwd packages/backend db:generate",
+    "db:migrate": "bun --cwd packages/backend db:migrate",
+    "db:studio": "bun --cwd packages/backend db:studio",
+    "lint": "bun run lint:backend && bun run lint:frontend",
+    "lint:backend": "bun --cwd packages/backend lint",
+    "lint:frontend": "bun --cwd packages/frontend lint",
+    "clean": "rm -rf node_modules packages/*/node_modules packages/*/.next packages/*/dist"
+  },
+  "keywords": [
+    "ecommerce",
+    "bun",
+    "nextjs",
+    "elysia",
+    "postgresql"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.0"
+  }
+}
